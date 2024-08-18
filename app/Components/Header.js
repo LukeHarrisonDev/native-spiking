@@ -1,22 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Animated } from "react-native";
 
-export default function Header() {
+export default function Header({animHeaderValue}) {
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>My App!!!</Text>
+            <Text style={styles.text}>Busk-A-Move!</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     text: {
-      marginTop: 70,
-      fontSize: 30,
-      position: "absolute",
-      top: 50
+      marginTop: 10,
+      fontSize: 50,
+      fontWeight: "800"
+      // top: 50
     },
     container: {
-      flex: 1,
+      height: 100,
       backgroundColor: 'lightblue',
       justifyContent: 'center',
       alignItems: 'center',
