@@ -2,24 +2,26 @@ import { StyleSheet, View } from 'react-native';
 import Header from './app/Components/Header';
 import WelcomeScreen from './app/Components/WelcomeScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';     
 import NewScreen from './app/Components/NewScreen';
 
 const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen}/>
-        <Stack.Screen name="NewScreen" component={NewScreen}/>
-      {/* <View style={styles.container}>
-        <Header style={styles.header}/>
+    // <View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="WelcomeScreen" component={WelcomeScreen}/>
+          <Stack.Screen name="NewScreen" component={NewScreen}/>
+        {/* <View style={styles.container}>
+          <Header style={styles.header}/>
 
-        <WelcomeScreen />
-      </View> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+          <WelcomeScreen />
+        </View> */}
+        </Stack.Navigator>
+      </NavigationContainer>
+    // </View>
   
   );
 }
